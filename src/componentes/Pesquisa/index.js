@@ -26,6 +26,12 @@ const Subtitulo = styled.h3`
 
 `
 
+const ImagemLivro = styled.img`
+ width: 120px !important;
+    height: 180px;
+    object-fit: cover
+`
+
 
 function Pesquisa(){
         const[livrosPesquisados, setLivrosPesquisados] = useState([])
@@ -50,7 +56,7 @@ function Pesquisa(){
         {livrosPesquisados.map(livro => (
               <div>
                 <p>{livro.nome}</p>
-                <img src={livro.src} alt=""/>
+                <ImagemLivro src={livro.src} alt=""/>
                </div> 
         ))}
    
